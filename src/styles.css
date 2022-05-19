@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body{
+    background-image: url(./assets/family-g4a6eac3ad_1280.png) ;
+    background-attachment: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 1300px 600px;
+
+}

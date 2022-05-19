@@ -1,0 +1,61 @@
+<form [formGroup]="meuForm" (submit)="onSubmit()">
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" class="form-control" formControlName="nomeVacina" placeholder="ex. Coronavac">    
+            </div>
+
+            <app-mostrar-mensagem 
+                [controles]="meuForm.controls['nomeVacina']" 
+                [mensagem]="'Erro ao preencher nome'"
+            ></app-mostrar-mensagem>
+
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label >Fabricante</label>
+                <input type="text" class="form-control" formControlName="fabricante" placeholder="ex. Butantan">    
+            </div>
+            <app-mostrar-mensagem 
+            [controles]="meuForm.controls['fabricante']" 
+            [mensagem]="'Erro ao preencher fabricante'"
+        ></app-mostrar-mensagem>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label >Quantidade de doses</label>
+                <input type="text" class="form-control" formControlName="dosesNecessarias" placeholder="ex. 2">    
+            </div>
+            <app-mostrar-mensagem 
+            [controles]="meuForm.controls['dosesNecessarias']" 
+            [mensagem]="'Erro ao preencher Quantidade de doses'"
+        ></app-mostrar-mensagem>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label >Intervalo de dias entre as doses</label>
+                <input type="text" class="form-control" formControlName="intervaloDeDiasEntreDoses" placeholder="30, 60, 90 ...">    
+            </div>
+            <app-mostrar-mensagem 
+            [controles]="meuForm.controls['intervaloDeDiasEntreDoses']" 
+            [mensagem]="'Erro ao preencher Intervalo de dias entre as doses'"
+        ></app-mostrar-mensagem>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">        
+        <button type="submit" class="btn btn-primary">Salvar</button>        
+    </div>
+
+
+</form>

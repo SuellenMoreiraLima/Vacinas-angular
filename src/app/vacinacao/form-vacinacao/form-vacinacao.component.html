@@ -1,0 +1,73 @@
+<form [formGroup]="meuForm" (submit)="onSubmit()">
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label >Usuario</label>
+                <input type="text" class="form-control" formControlName="usuario" placeholder="ex. Leandro Santos">    
+            </div>
+
+            <app-mostrar-mensagem 
+                [controles]="meuForm.controls['usuario']" 
+                [mensagem]="'Erro ao preencher usuario'"
+            ></app-mostrar-mensagem>
+
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label >Vacina</label>
+                <input type="text" class="form-control" formControlName="vacina" placeholder="ex. Coronavac">    
+            </div>
+            <app-mostrar-mensagem 
+            [controles]="meuForm.controls['vacina']" 
+            [mensagem]="'Erro ao preencher vacina'"
+        ></app-mostrar-mensagem>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label >Data da aplicação</label>
+                <input type="text" class="form-control" formControlName="dataAplicacao" placeholder="Data da Aplicação">    
+            </div>
+            <app-mostrar-mensagem 
+            [controles]="meuForm.controls['dataAplicacao']" 
+            [mensagem]="'Erro ao preencher data da aplicação'"
+        ></app-mostrar-mensagem>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label >Numero da Dose</label>
+                <input type="text" class="form-control" formControlName="numeroDaDose" placeholder="ex. 1">    
+            </div>
+            <app-mostrar-mensagem 
+            [controles]="meuForm.controls['numeroDaDose']" 
+            [mensagem]="'Erro ao preencher numero da dose'"
+        ></app-mostrar-mensagem>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label >Data da próxima aplicação</label>
+                <input type="text" class="form-control" formControlName="dataProximaAplicacao" placeholder="ex. 25/03/2022">    
+            </div>
+            <app-mostrar-mensagem 
+            [controles]="meuForm.controls['dataProximaAplicacao']" 
+            [mensagem]="'Erro ao preencher data da próxima aplicação'"
+        ></app-mostrar-mensagem>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">        
+        <button type="submit" class="btn btn-primary">Salvar</button>        
+    </div>
+
+
+</form>

@@ -1,0 +1,74 @@
+<form [formGroup]="meuForm" (submit)="onSubmit()">
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label >Nome</label>
+                <input type="text"  class="form-control" formControlName="nome" placeholder="Nome">    
+            </div>
+
+            <app-mostrar-mensagem 
+                [controles]="meuForm.controls['nome']" 
+                [mensagem]="'Erro ao preencher nome'"
+            ></app-mostrar-mensagem>
+
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label >CPF</label>
+                <input type="text"class="form-control" formControlName="cpf" placeholder="CPF">    
+            </div>
+            <app-mostrar-mensagem 
+            [controles]="meuForm.controls['cpf']" 
+            [mensagem]="'Erro ao preencher cpf'"
+        ></app-mostrar-mensagem>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label >Data de Nascimento</label>
+                <input type="text" class="form-control" formControlName="dataNascimento" placeholder="Data de Nascimento">    
+            </div>
+            <app-mostrar-mensagem 
+            [controles]="meuForm.controls['dataNascimento']" 
+            [mensagem]="'Erro ao preencher Data de Nascimento'"
+        ></app-mostrar-mensagem>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label >Endereço</label>
+                <input type="text" class="form-control" formControlName="endereco" placeholder="endereco">    
+            </div>
+            <app-mostrar-mensagem 
+            [controles]="meuForm.controls['endereco']" 
+            [mensagem]="'Erro ao preencher Endereço'"
+        ></app-mostrar-mensagem>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-8">
+            <div class="form-group">
+                <label >Telefone</label>
+                <input type="text" class="form-control" formControlName="telefone" placeholder="telefone">    
+            </div>
+            <app-mostrar-mensagem 
+            [controles]="meuForm.controls['telefone']" 
+            [mensagem]="'Erro ao preencher Telefone'"
+        ></app-mostrar-mensagem>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">        
+        <button type="submit" class="btn btn-primary">Salvar</button>        
+    </div>
+
+
+</form>

@@ -1,0 +1,29 @@
+
+
+<div class="row float-end">
+    <button class="btn btn-sucess" routerLink="/vacina/criar">Adicionar +</button>
+</div>
+
+<table class="table" >
+<tr >
+    <th> ID </th>
+    <th> Nome </th>
+    <th> Fabricante </th>
+    <th> Quantidade de Doses Necessárias </th>
+    <th> Intervalo de dias entre as Doses </th>
+
+</tr>
+<tr *ngFor="let u of vacina">
+    <td>{{u.idVacina}}</td>
+    <td>{{u.nome}}</td>
+    <td>{{u.fabricante}}</td>
+    <td>{{u.dosesNecessarias}}</td>
+    <td>{{u.intervaloDeDiasEntreDoses}}</td>
+<td>
+    <button class="btn btn-outline-dark"
+        [routerLink]="['/vacina/editar', u.idVacina]">Editar</button>
+<button class="btn btn-outline-danger" 
+        (click)="onDelete(u.idVacina)">Deletar</button>        
+</td>
+</tr>
+</table>

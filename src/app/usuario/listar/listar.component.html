@@ -1,0 +1,30 @@
+
+
+<div class="row float-end">
+        <button class="btn btn-sucess" routerLink="/usuario/criar">Adicionar +</button>
+</div>
+
+<table class="table" >
+    <tr >
+        <th> ID </th>
+        <th> Nome </th>
+        <th> CPF </th>
+        <th> Data de Nascimento </th>
+        <th> Endereço </th>
+        <th> Telefone </th>
+    </tr>
+    <tr *ngFor="let u of usuario">
+        <td>{{u.idUsuario}}</td>
+        <td>{{u.nome}}</td>
+        <td>{{u.cpf}}</td>
+        <td>{{u.dataNascimento}}</td>
+        <td>{{u.endereco}}</td>
+        <td>{{u.telefone}}</td>
+        <td>
+            <button class="btn btn-outline-dark"
+                [routerLink]="['/usuario/editar', u.idUsuario]">Editar</button>
+        <button class="btn btn-outline-danger" 
+                (click)="onDelete(u.idUsuario)">Deletar</button>        
+    </td>
+    </tr>
+</table>
